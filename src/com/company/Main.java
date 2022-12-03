@@ -16,6 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Odontologo
+
         /*Odontologo odontologo = new Odontologo(2L,"Nicolas","Olave",990629L);
 
         OdontologoService odontologoService = new OdontologoService();
@@ -24,14 +26,12 @@ public class Main {
         odontologoService.agregarOdontologo(odontologo);
         odontologoService.listarOdontologo(2L);*/
 
-        try{
-            // Pacientes en progreso aún
-            Paciente paciente = new Paciente(2L,"Juan David","Alvarez","Carrera 1 #70-210",11654987L,"2021-10-23");
-            PacienteService pacienteService = new PacienteService();
-            pacienteService.setPacienteIDao(new PacienteDAOH2());
-            pacienteService.agregarPaciente(paciente);
-        }catch (Exception e){
-            LOGGER.error("Error al insertar paciente");
-        }
+        // Paciente
+        //Paciente paciente = new Paciente(2L,"Juan David","Alvarez","Carrera 1 #70-210",11654987L,"2021-10-23");
+        PacienteService pacienteService = new PacienteService();
+        pacienteService.setPacienteIDao(new PacienteDAOH2());
+        //pacienteService.agregarPaciente(paciente);
+
+        pacienteService.listarPaciente(2L);
     }
 }

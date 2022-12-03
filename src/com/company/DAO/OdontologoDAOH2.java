@@ -42,7 +42,7 @@ public class OdontologoDAOH2 implements IDaoOdontologo<Odontologo>{
             LOGGER.debug("Se agregó un odontologo");
 
         } catch (ClassNotFoundException | SQLException e) {
-            LOGGER.error("Error en el insert");
+            LOGGER.error("Error al insertar un odontologo");
         }
 
         return odontologo;
@@ -72,7 +72,7 @@ public class OdontologoDAOH2 implements IDaoOdontologo<Odontologo>{
             LOGGER.debug("Se eliminó un odontologo");
 
         } catch (ClassNotFoundException | SQLException e) {
-            LOGGER.error("Error en el delete");
+            LOGGER.error("Error al eliminar un odontologo");
         }
     }
 
@@ -95,14 +95,6 @@ public class OdontologoDAOH2 implements IDaoOdontologo<Odontologo>{
             ResultSet result = preparedStatement.executeQuery();
 
             // Mostrar los resultados
-            /*while(result.next()){
-                Long idOdontologo = result.getLong("ID");
-                String nombre = result.getString("NOMBRE");
-                String apellido = result.getString("APELLIDO");
-                Long matricula = result.getLong("MATRICULA");
-                odontologo = new Odontologo(idOdontologo,nombre,apellido,matricula);
-            }*/
-
             while (result.next()){
                 System.out.println("ID:"+result.getLong(1)
                         +"\nNombre:"+ result.getString(2)
@@ -114,7 +106,7 @@ public class OdontologoDAOH2 implements IDaoOdontologo<Odontologo>{
             connection.setAutoCommit(true);
 
         } catch (ClassNotFoundException | SQLException e) {
-            LOGGER.error("Error en el listar");
+            LOGGER.error("Error al listar un odontologo");
         }
 
         return odontologo;

@@ -1,5 +1,6 @@
 package com.company.DAO;
 
+import com.company.Entidades.Odontologo;
 import com.company.Entidades.Paciente;
 import org.apache.log4j.Logger;
 
@@ -42,7 +43,7 @@ public class PacienteDAOH2 implements IDaoPaciente<Paciente> {
             LOGGER.debug("Se agregó un paciente");
 
         } catch (ClassNotFoundException | SQLException e) {
-            LOGGER.error("Error en el insert del paciente");
+            LOGGER.error("Error al insertar un paciente");
         }
 
         return paciente;
@@ -72,12 +73,45 @@ public class PacienteDAOH2 implements IDaoPaciente<Paciente> {
             LOGGER.debug("Se eliminó un paciente");
 
         } catch (ClassNotFoundException | SQLException e) {
-            LOGGER.error("Error en el delete del paciente");
+            LOGGER.error("Error al eliminar un paciente");
         }
     }
 
     @Override
     public Paciente listar(Long id) {
-        return null;
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        Paciente paciente = null;
+        try {
+            // Conexión
+            Class.forName(DB_JDBC_DRIVER);
+            connection = DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWORD);
+            connection.setAutoCommit(false);
+
+            // Sentencia para seleccionar por id
+            preparedStatement = connection.prepareStatement("SELECT * FROM PACIENTES WHERE ID=?");
+            preparedStatement.setLong(1,id);
+
+            // Ejecutar la sentencia
+            ResultSet result = preparedStatement.executeQuery();
+
+            // Mostrar los resultados
+            while (result.next()){
+                System.out.println("ID:"+result.getLong(1)
+                        +"\nNombre:"+ result.getString(2)
+                        +"\nApellido:"+ result.getString(3)
+                        +"\nDomicilio:"+ result.getString(4)
+                        +"\nMatrícula:"+ result.getLong(5)
+                        +"\nFecha de alta:"+ result.getString(6)
+                );
+            }
+            connection.commit();
+            connection.setAutoCommit(true);
+
+        } catch (ClassNotFoundException | SQLException e) {
+            LOGGER.error("Error al listar un paciente");
+        }
+
+        return paciente;
     }
 }
