@@ -8,9 +8,9 @@ public class Paciente {
     private String apellido;
     private String domicilio;
     private Long DNI;
-    private Date fechaDeAlta;
+    private String fechaDeAlta;
 
-    public Paciente(Long id, String nombre, String apellido, String domicilio, Long DNI, Date fechaDeAlta) {
+    public Paciente(Long id, String nombre, String apellido, String domicilio, Long DNI, String fechaDeAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -59,11 +59,11 @@ public class Paciente {
         this.DNI = DNI;
     }
 
-    public Date getFechaDeAlta() {
+    public String getFechaDeAlta() {
         return fechaDeAlta;
     }
 
-    public void setFechaDeAlta(Date fechaDeAlta) {
+    public void setFechaDeAlta(String fechaDeAlta) {
         this.fechaDeAlta = fechaDeAlta;
     }
 }

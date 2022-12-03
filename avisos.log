@@ -15,3 +15,14 @@
 [2022-11-13 14:08:31] [ERROR] [Main:35] Error al insertar paciente
 [2022-11-13 14:11:17] [ERROR] [Main:35] Error al insertar paciente
 [2022-11-13 14:11:35] [ERROR] [Main:35] Error al insertar paciente
+[2022-12-03 08:55:35] [ERROR] [PacienteDAOH2:45] Error en el insert del paciente
+[2022-12-03 08:59:03] [ERROR] [OdontologoDAOH2:45] Error en el insert
+[2022-12-03 08:59:03] [ERROR] [OdontologoDAOH2:117] Error en el listar
+[2022-12-03 09:10:08] [DEBUG] [OdontologoDAOH2:42] Se agregó un odontologo
+[2022-12-03 09:11:01] [DEBUG] [OdontologoDAOH2:42] Se agregó un odontologo
+[2022-12-03 09:11:31] [DEBUG] [OdontologoDAOH2:42] Se agregó un odontologo
+[2022-12-03 09:12:41] [ERROR] [OdontologoDAOH2:45] Error en el insert
+[2022-12-03 09:18:24] [DEBUG] [OdontologoDAOH2:42] Se agregó un odontologo
+[2022-12-03 09:18:57] [DEBUG] [OdontologoDAOH2:42] Se agregó un odontologo
+[2022-12-03 09:22:25] [DEBUG] [PacienteDAOH2:42] Se agregó un paciente
+[2022-12-03 09:23:39] [DEBUG] [PacienteDAOH2:42] Se agregó un paciente

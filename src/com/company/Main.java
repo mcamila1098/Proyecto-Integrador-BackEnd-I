@@ -16,24 +16,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Odontologo odontologo = new Odontologo(10L,"Nelcy","Portilla",543627L);
+        /*Odontologo odontologo = new Odontologo(2L,"Nicolas","Olave",990629L);
 
         OdontologoService odontologoService = new OdontologoService();
         odontologoService.setOdontologoIDao(new OdontologoDAOH2());
 
-        //odontologoService.agregarOdontologo(odontologo);
-        odontologoService.listarOdontologo(1L);
+        odontologoService.agregarOdontologo(odontologo);
+        odontologoService.listarOdontologo(2L);*/
 
         try{
             // Pacientes en progreso aún
-            Paciente paciente = new Paciente(1L,"Ofir","Rojas","Calle 10 #20-44",66816086L,new Date());
+            Paciente paciente = new Paciente(2L,"Juan David","Alvarez","Carrera 1 #70-210",11654987L,"2021-10-23");
             PacienteService pacienteService = new PacienteService();
             pacienteService.setPacienteIDao(new PacienteDAOH2());
             pacienteService.agregarPaciente(paciente);
-
         }catch (Exception e){
             LOGGER.error("Error al insertar paciente");
         }
-
     }
 }

@@ -31,7 +31,7 @@ public class PacienteDAOH2 implements IDaoPaciente<Paciente> {
             preparedStatement.setString(3,paciente.getApellido());
             preparedStatement.setString(4,paciente.getDomicilio());
             preparedStatement.setLong(5,paciente.getDNI());
-            preparedStatement.setDate(6, (Date) paciente.getFechaDeAlta());
+            preparedStatement.setString(6,paciente.getFechaDeAlta());
 
             // Ejecutar la sentencia
             preparedStatement.executeUpdate();
