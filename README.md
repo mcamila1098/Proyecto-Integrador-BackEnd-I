@@ -1,6 +1,6 @@
-Hola! Este es mi progreso en mi trabajo integrador de la materia Back End I
+Hola! Este es mi progreso en mi trabajo integrador de la materia Back End I 🚀
 
-## Sistema de reserva de turnos
+## Sistema de reserva de turnos 🖥
 
 Se desea implementar un sistema que permita administrar la reserva de turnos para una clínica odontológica. Este debe cumplir con los siguientes requerimientos: <br>
 <ul>
